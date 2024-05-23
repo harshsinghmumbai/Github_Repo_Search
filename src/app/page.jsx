@@ -6,8 +6,8 @@ import { AiFillMoon } from "react-icons/ai";
 export default function Home() {
   return (
     <>
-      <main className="grid place-items-center mt-10">
-        <div className="border border-red-600 rounded-xl w-full p-5">
+      <main className="grid place-items-center mt-10 sm:h-screen sm:mt-0">
+        <div className="border border-red-600 rounded-xl w-full sm:w-[641px] p-5">
           <nav className="flex justify-between">
             <p className="text-xl font-semibold font-serif hover:text-blue-600">
               DevDective

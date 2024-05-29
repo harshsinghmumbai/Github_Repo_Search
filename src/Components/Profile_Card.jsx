@@ -14,6 +14,10 @@ const Profile_Card = ({ repos }) => {
     following,
     followers,
   } = repos;
+
+  //convert ISOdate into normal Date//
+  const data = new Date(created_at);
+  const format_date = `${data.getDate()}/${data.getMonth()}/${data.getFullYear()}`;
   return (
     <>
       <div className="mt-10 sm:mt-5 flex flex-col sm:flex sm:flex-row dark:bg-[#161616] ">
@@ -26,14 +30,14 @@ const Profile_Card = ({ repos }) => {
         </div>
         <div className="sm:ml-5">
           <div className="mt-3 flex justify-between">
-            <p className="text-sm sm:text-lg font-semibold font-serif capitalize dark:text-white">
+            <p className="text-base sm:text-2xl font-semibold font-serif capitalize dark:text-white">
               {name}
             </p>
-            <p className="text-sm sm:text-lg font-semibold font-serif text-center dark:text-white">
-              {created_at}
+            <p className="text-sm sm:text-lg font-semibold text-center dark:text-white">
+              {format_date}
             </p>
           </div>
-          <p className="text-sm sm:text-lg font-serif capitalize my-2 dark:text-white">
+          <p className="text-sm sm:text-lg capitalize my-2 dark:text-white">
             User_Id:- {id}
           </p>
           <p className="text-left sm:text-xl sm:font-serif sm:text-center my-3 dark:text-white">

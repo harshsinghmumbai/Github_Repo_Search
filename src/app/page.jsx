@@ -16,10 +16,12 @@ export default function Home() {
     setdarkMode(!darkMode);
   };
   const getData = async () => {
+    setisloading(true);
     try {
       const url = `https://api.github.com/users/${value}`;
       const response = await fetch(url);
       const data = await response.json();
+      console.log(data);
       setisloading(false);
       setRepos(data);
     } catch (error) {
